@@ -3,19 +3,13 @@
 
 name = "Go Clean"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
-description = ""
-homepage = "http://siteforthistheme.com/"
+licenselink = "https://github.com/rig0rmortis/go-clean/blob/master/LICENSE.md"
+description = "A clean and simple theme for Hugo"
+homepage = "https://github.com/rig0rmortis/go-clean"
 tags = ["", ""]
 features = ["", ""]
 min_version = 0.15
 
 [author]
-  name = ""
-  homepage = ""
-
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
+  name = "rig0rmortis"
+  homepage = "https://rig0rmortis.com"
