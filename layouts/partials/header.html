@@ -3,4 +3,11 @@
     <title>{{ .Title }}</title>
   </head>
 
+  <header>
+    <div>
+      <h2><a href="{{ .Site.BaseURL }}">{{ .Title }}</a></h2>
+      <p>{{ .Site.Params.subtitle }}</p>
+    </div>
+  </header>
+
   <body>
