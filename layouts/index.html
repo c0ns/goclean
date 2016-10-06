@@ -1,11 +1,12 @@
 {{ partial "header.html" . }}
 
 <h3>articles</h3>
-{{- range first 10 .Data.Pages -}}
+{{- range .Paginator.Pages -}}
   {{- if eq .Type "article"}}
     <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
-    {{ .Summary }}
+    {{ .Description }}
   {{- end -}}
 {{- end }}
+{{ partial "pagination.html" . }}
 
 {{ partial "footer.html" . }}
