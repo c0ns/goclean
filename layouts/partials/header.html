@@ -1,14 +1,18 @@
 <html>
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/header.css">
+
   <head>
     <title>{{ .Site.Title }}</title>
   </head>
 
   <header>
-    <div>
+    <div class="header">
       <h2><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h2>
-      <p>{{ .Site.Params.subtitle }}</p>
+      {{- if .Site.Params.subtitle -}}
+        <p>{{ .Site.Params.subtitle }}</p>
+      {{- end -}}
     </div>
-    <div>
+    <div class="navigation">
       <h4>
       {{- range .Site.Pages.ByTitle -}}
         {{- if eq .Type "static"}}
