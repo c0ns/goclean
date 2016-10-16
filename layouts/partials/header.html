@@ -13,13 +13,13 @@
       {{- end -}}
     </div>
     <div class="navigation">
-      <h4>
+      <h4> /
       {{- range .Site.Pages.ByTitle -}}
         {{- if eq .Type "static"}}
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
+          <a href="{{ .Permalink }}">{{ .Title }}</a> /
         {{- end -}}
       {{- end }}
-      {{ with .Site.Params.github }}<a href="{{ . }}">github</a>{{ end }}
+      {{ with .Site.Params.github }}<a href="{{ . }}">github</a>{{ end }} /
       </h4>
     </div>
   </header>
