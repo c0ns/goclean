@@ -1,3 +1,12 @@
-{{ partial "header.html" }}
+{{ partial "header.html" . }}
 
-{{ partial "footer.html" }}
+<h3>articles</h3>
+{{- range .Paginator.Pages -}}
+  {{- if eq .Type "article"}}
+    <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+    {{ .Description }}
+  {{- end -}}
+{{- end }}
+
+{{ partial "pagination.html" . }}
+{{ partial "footer.html" . }}

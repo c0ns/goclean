@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>{{ .Site.Title }}</title>
+  </head>
+
+  <header>
+    <div>
+      <h2><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h2>
+      <p>{{ .Site.Params.subtitle }}</p>
+    </div>
+    <div>
+      <h4>
+      {{- range .Site.Pages.ByTitle -}}
+        {{- if eq .Type "static"}}
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        {{- end -}}
+      {{- end }}
+      {{ with .Site.Params.github }}<a href="{{ . }}">github</a>{{ end }}
+      </h4>
+    </div>
+  </header>
+
+  <body>
