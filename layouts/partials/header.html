@@ -1,23 +1,39 @@
 <html>
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/header.css">
+
   <head>
     <title>{{ .Site.Title }}</title>
   </head>
 
   <header>
-    <div>
-      <h2><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h2>
-      <p>{{ .Site.Params.subtitle }}</p>
+    <div class="header">
+      <h2>
+        {{- if .Site.Params.HeaderLogo -}}
+          <a href="{{ .Site.BaseURL }}"><img src="{{ .Site.Params.HeaderLogo }}" height="100" style="vertical-align: middle;"></a>
+        {{- end -}}
+        <a class="HeaderTitle" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+      </h2>
+      {{- if .Site.Params.subtitle -}}
+        <p>{{ .Site.Params.subtitle }}</p>
+      {{- end -}}
     </div>
-    <div>
-      <h4>
+    <hr>
+    <div class="navigation">
+      <h4> /
       {{- range .Site.Pages.ByTitle -}}
         {{- if eq .Type "static"}}
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
+          <a href="{{ .Permalink }}">{{ .Title }}</a> /
         {{- end -}}
       {{- end }}
-      {{ with .Site.Params.github }}<a href="{{ . }}">github</a>{{ end }}
+      {{ with .Site.Params.github }}<a href="{{ . }}">GitHub</a>{{ end }} /
       </h4>
     </div>
   </header>
 
-  <body>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <hr>
+
+<body>
