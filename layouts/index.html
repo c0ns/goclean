@@ -1,14 +1,12 @@
 <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css">
 {{ partial "header.html" . }}
 
-<p>
 {{- range .Paginator.Pages -}}
   {{- if eq .Type "article"}}
     <h4 class="article"><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
     {{ .Description }}
   {{- end -}}
 {{- end }}
-</p>
 
 {{ partial "pagination.html" . }}
 {{ partial "footer.html" . }}

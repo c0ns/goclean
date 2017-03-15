@@ -9,6 +9,10 @@ html {
   color: #212121;
 }
 
+#center html {
+  text-align: left;
+}
+
 p {
   text-align: justify;
 }
@@ -18,7 +22,7 @@ p.centered {
 }
 
 a {
-  color: #FF5722;
+  color: #0366d6;
   text-decoration: none;
 }
 
