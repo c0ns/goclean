@@ -3,13 +3,13 @@
 
 name = "Go Clean"
 license = "MIT"
-licenselink = "https://github.com/rig0rmortis/go-clean/blob/master/LICENSE.md"
+licenselink = "https://github.com/plebasaurus/goclean/blob/master/LICENSE.md"
 description = "A clean and simple theme for Hugo"
-homepage = "https://github.com/rig0rmortis/go-clean"
+homepage = "https://github.com/plebasaurus/goclean"
 tags = ["", ""]
 features = ["", ""]
 min_version = 0.15
 
 [author]
-  name = "rig0rmortis"
-  homepage = "https://rig0rmortis.com"
+  name = "plebasaurus"
+  homepage = "https://github.com/plebasaurus"
